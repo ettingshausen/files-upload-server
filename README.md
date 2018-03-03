@@ -1,12 +1,18 @@
 # files-upload-server
 files upload server for clients via Spring Boot
 
-# Package
+
+[![Java](https://img.shields.io/badge/Java-1.8-blue.svg?style=flat)](https://travis-ci.org/ettingshausen/ettingshausen.github.io)
+[![SpringBoot](https://img.shields.io/badge/SpringBoot-2.0-blue.svg?style=flat)](https://travis-ci.org/ettingshausen/ettingshausen.github.io)
+
+
+
+## Package
 ```
 mvn clean package
 ```
 
-# Run
+## Run
 
 ```bash
 java -jar file-upload-server-0.0.1-SNAPSHOT.jar
@@ -18,7 +24,12 @@ You can override like this:
 java -jar file-upload-server-0.0.1-SNAPSHOT.jar --server.port=8080 --upload.path=D:\\upload\\
 ```
 
-# Test
+## Test
 
 
 ![postman](http://wx3.sinaimg.cn/large/685ea4faly1fozmqb7lbwj20mx0ckt9h.jpg)
+
+
+## License
+
+The repo is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
