@@ -1,9 +1,9 @@
 # files-upload-server
 files upload server for clients via Spring Boot
 
-
-[![Java](https://img.shields.io/badge/Java-1.8-blue.svg?style=flat)](https://travis-ci.org/ettingshausen/ettingshausen.github.io)
-[![SpringBoot](https://img.shields.io/badge/SpringBoot-2.0-blue.svg?style=flat)](https://travis-ci.org/ettingshausen/ettingshausen.github.io)
+[![Build Status](https://travis-ci.org/ettingshausen/files-upload-server.svg?branch=master)](https://travis-ci.org/ettingshausen/files-upload-server)
+[![Java](https://img.shields.io/badge/Java-1.8-blue.svg?style=flat)](https://travis-ci.org/ettingshausen/files-upload-server)
+[![SpringBoot](https://img.shields.io/badge/SpringBoot-2.0-blue.svg?style=flat)](https://travis-ci.org/ettingshausen/files-upload-server)
 
 
 
