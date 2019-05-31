@@ -1,8 +1,7 @@
-package com.winning.fileuploadserver.action;
+package com.winning.fileuploadserver.controller;
 
 import com.winning.fileuploadserver.domain.ResultBody;
 import org.springframework.core.env.Environment;
-import org.springframework.http.HttpStatus;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,6 +17,9 @@ import java.nio.file.Paths;
 import java.util.*;
 import java.util.stream.Collectors;
 
+/**
+ * @author ettingshausen
+ */
 @RestController
 public class FileUploadControl {
 

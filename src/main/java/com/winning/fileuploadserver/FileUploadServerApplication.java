@@ -3,10 +3,13 @@ package com.winning.fileuploadserver;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * @author ettingshausen
+ */
 @SpringBootApplication
 public class FileUploadServerApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(FileUploadServerApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(FileUploadServerApplication.class, args);
+    }
 }

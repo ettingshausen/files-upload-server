@@ -1,5 +1,8 @@
 package com.winning.fileuploadserver.domain;
 
+/**
+ * @author ettingshausen
+ */
 public class ResultBody {
     private String code;
     private String message;
