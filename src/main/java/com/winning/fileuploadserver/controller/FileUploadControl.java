@@ -6,9 +6,9 @@ import org.springframework.core.env.Environment;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
+import springfox.documentation.annotations.ApiIgnore;
 
 import javax.annotation.Resource;
 import java.io.IOException;
@@ -28,7 +28,13 @@ public class FileUploadControl {
     @Resource
     private Environment env;
 
-    @ResponseBody
+    /**
+     * Batch upload
+     * swagger-ui does't support MultipartFile[]
+     * @param files Multi files
+     * @return file names
+     */
+    @ApiIgnore
     @PostMapping(value = "/upload")
     public Object batchUpload(@RequestParam("files") MultipartFile[] files) {
 
@@ -53,6 +59,30 @@ public class FileUploadControl {
             resultBody.setCode("500");
             resultBody.setMessage(e.getMessage());
         }
+        return resultBody;
+    }
+
+    @PostMapping("/file")
+    public ResultBody upload(@RequestParam("file") MultipartFile file) {
+
+        ResultBody resultBody = new ResultBody();
+        resultBody.setCode("0");
+
+        try {
+            byte[] bytes = file.getBytes();
+            if (!Files.exists(Paths.get(getFilePath()))) {
+                Files.createDirectories(Paths.get(getFilePath()));
+            }
+            Path path = Paths.get(getFilePath() + file.getOriginalFilename());
+            Files.write(path, bytes);
+            resultBody.setMessage("调用成功！");
+            resultBody.setResult(file.getOriginalFilename());
+        } catch (IOException e) {
+            e.printStackTrace();
+            resultBody.setCode("500");
+            resultBody.setMessage(e.getMessage());
+        }
+
         return resultBody;
     }
 

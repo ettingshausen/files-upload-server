@@ -6,7 +6,7 @@
     <groupId>com.winning</groupId>
     <artifactId>file-upload-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>${packageType}</packaging>
 
     <name>file-upload-server</name>
     <description>Demo project for Spring Boot</description>
@@ -21,14 +21,41 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
         <swagger.version>2.9.2</swagger.version>
     </properties>
+
+    <profiles>
+        <profile>
+            <id>jar</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <packageType>jar</packageType>
+            </properties>
+        </profile>
+        <profile>
+            <id>war</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <packageType>jar</packageType>
+            </properties>
+        </profile>
+    </profiles>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+            <optional>true</optional>
         </dependency>
 
         <dependency>
