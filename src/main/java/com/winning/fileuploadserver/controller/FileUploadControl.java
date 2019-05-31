@@ -1,6 +1,7 @@
 package com.winning.fileuploadserver.controller;
 
 import com.winning.fileuploadserver.domain.ResultBody;
+import io.swagger.annotations.Api;
 import org.springframework.core.env.Environment;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,6 +21,7 @@ import java.util.stream.Collectors;
 /**
  * @author ettingshausen
  */
+@Api(value = "File Upload", tags = "File")
 @RestController
 public class FileUploadControl {
 
