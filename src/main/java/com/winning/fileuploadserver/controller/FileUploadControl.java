@@ -31,6 +31,7 @@ public class FileUploadControl {
     /**
      * Batch upload
      * swagger-ui does't support MultipartFile[]
+     *
      * @param files Multi files
      * @return file names
      */
@@ -76,7 +77,7 @@ public class FileUploadControl {
             Path path = Paths.get(getFilePath() + file.getOriginalFilename());
             Files.write(path, bytes);
             resultBody.setMessage("调用成功！");
-            resultBody.setResult(file.getOriginalFilename());
+            resultBody.setResult(getFilePath() + file.getOriginalFilename());
         } catch (IOException e) {
             e.printStackTrace();
             resultBody.setCode("500");
