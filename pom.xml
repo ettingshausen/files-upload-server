@@ -40,7 +40,7 @@
                 <activeByDefault>false</activeByDefault>
             </activation>
             <properties>
-                <packageType>jar</packageType>
+                <packageType>war</packageType>
             </properties>
         </profile>
     </profiles>
