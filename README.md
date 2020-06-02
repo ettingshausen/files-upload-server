@@ -1,6 +1,7 @@
 # files-upload-server
 files upload server for clients via Spring Boot
 
+![Java CI with Maven](https://github.com/ettingshausen/files-upload-server/workflows/Java%20CI%20with%20Maven/badge.svg)
 [![Build Status](https://travis-ci.org/ettingshausen/files-upload-server.svg?branch=master)](https://travis-ci.org/ettingshausen/files-upload-server)
 [![Java](https://img.shields.io/badge/Java-1.8-blue.svg?style=flat)](https://travis-ci.org/ettingshausen/files-upload-server)
 [![SpringBoot](https://img.shields.io/badge/SpringBoot-2.0-blue.svg?style=flat)](https://travis-ci.org/ettingshausen/files-upload-server)
