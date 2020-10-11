@@ -7,4 +7,4 @@ spring:
       max-file-size: -1
       max-request-size: -1
 upload:
-  path: D:\\test\\
+  path: /Users/edward/develop/upload/

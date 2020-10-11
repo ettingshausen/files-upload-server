@@ -15,7 +15,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * @date 2019/5/31 15:08
  */
 @Configuration
-@EnableSwagger2
 public class SwaggerConfig {
 
     @Bean
