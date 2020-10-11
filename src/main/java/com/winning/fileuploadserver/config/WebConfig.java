@@ -13,6 +13,9 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addRedirectViewController("/", "swagger-ui.html");
+        // swagger-ui location has moved from http://host/context-path/swagger-ui.html to
+        // http://host/context-path/swagger-ui/index.html OR http://host/context-path/swagger-ui/ for short.
+        // This makes it work much better with pulling it as a web jar and turning it off using configuration properties if not needed.
+        registry.addRedirectViewController("/", "/swagger-ui/");
     }
 }
